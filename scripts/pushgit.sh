@@ -1,12 +1,14 @@
 echo "__________________________________________"
-printf "Bericht: "
-read INPUT
-echo "#######################################"
+read -p "Methode en bericht: " METHODE BERICHT 
+echo " ________________________________________"
+echo "|Methode: $METHODE"
+echo "|Bericht: $BERICHT"
+echo "|________________________________________|"
 git add .
-git commit -m "$INPUT"
+git commit -m $BERICHT
 echo " ________________________________________ "
 echo "|Gebruikersnaam en Wachtwoord alstublieft|"
 echo "|________________________________________|"
-git push origin master
+git $METHODE origin master
 
 
