@@ -13,10 +13,11 @@ fi
 
 for i in "$dir"/*
 do
-filename="$i"
+filename="${i##*/}"
 echo $filename
 creationdate=$(ls -l --time-style='+%d-%m-%y' "$i" | awk '{print $6}')
-weeknum$(date --date="$creationdate")
+weeknum=$(date --date="$creationdate")
+echo $weeknum
 if [[ $(find . -wholename "$filename"] -mtime +100 -print) ]]; then
 
 mkdir "$dir/$num"
