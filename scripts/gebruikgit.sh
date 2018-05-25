@@ -1,14 +1,15 @@
-echo "_________________________________________"
+echo -e "*****************************************
+*****************************************"
 read -p "Methode en bericht: " METHODE BERICHT 
-echo " ________________________________________"
-echo "|Methode: $METHODE"
-echo "|Bericht: $BERICHT"
-echo "|________________________________________|"
+echo -e "*****************************************
+******************************************"
+echo "|Methode: $METHODE|"
+echo "|Bericht: $BERICHT|"
 git add .
 git commit -m $BERICHT
-echo " ________________________________________ "
-echo "|Gebruikersnaam en Wachtwoord alstublieft|"
-echo "|________________________________________|"
+echo -e "****************************************
+ |Gebruikersnaam en Wachtwoord|
+*****************************************"
 git $METHODE origin master
 
 
