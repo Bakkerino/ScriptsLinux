@@ -9,9 +9,10 @@ echo -e "
 "
 git add .
 git commit -m $BERICHT
-echo " ________________________________________ "
-echo "|Gebruikersnaam en Wachtwoord alstublieft|"
-echo "|________________________________________|"
+echo -e "
+*************************************************
+*************************************************
+"
 git push origin master
 
 
