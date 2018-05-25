@@ -13,10 +13,13 @@ fi
 
 for i in "$dir"/*
 do
+#Registreer filenaam
 filename="${i##*/}"
 echo $filename
+
+#Datum uitrekenen
 creationdate=$(ls -l --time-style='+%d-%m-%y' "$i" | awk '{print $6}')
-weeknum=$(date --date="$creationdate")
+weeknum=$(date -d "$creationdate" +%V)
 echo $weeknum
 if [[ $(find . -wholename "$filename"] -mtime +100 -print) ]]; then
 
@@ -24,7 +27,7 @@ mkdir "$dir/$num"
 
 fi
 #copyfile
-cp "$i" "$dir/$num/$filename"
+#cp "$i" "$dir/$num/$filename"
 done
 
 #creationdate=$(ls -l --time-style='+%d-%m-%y' "$i" | awk '{print $6}')
