@@ -25,6 +25,22 @@ if [[ $(find . -wholename "$filename"] -mtime +100 -print) ]]; then
 
 mkdir "$dir/$num"
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 fi
 #copyfile
 #cp "$i" "$dir/$num/$filename"
