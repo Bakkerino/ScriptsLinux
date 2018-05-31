@@ -11,6 +11,7 @@ destdir=/home/azureuser/photos/sorted
 #read -p "Destenation dir: " destdir
 
 
+#Checken of de directory overeenkomt met een bestaande directory
 if [ -d "$dir" ]; then
 	echo "this is a valid directory"
 else
@@ -21,7 +22,7 @@ fi
 for i in $(find $dir -iname "*.jpg" )
 do
 
-        #Check if the file actualy exists $dir
+ 	#Checken of de file bestaat
         if [ -f $i ]; then
              creationdate=$(ls -l --time-style='+%d-%m-%y' "$i" | awk '{print $6}')
 	     weeknum=$(date -d "$creationdate" +%V)
