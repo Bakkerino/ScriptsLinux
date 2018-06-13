@@ -1,4 +1,4 @@
-#Opvragen variabelen
+apt-get install git
 read -p "Gebruikersnaam: " NAAM
 read -p "Email: " EMAIL
 read -p "Github link: " GITLINK
