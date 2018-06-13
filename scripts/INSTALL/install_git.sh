@@ -9,8 +9,6 @@ echo "####################################"
 echo "Repository wordt aangemaakt in ~/git"
 echo "####################################"
 mkdir ~/git
-echo "init"
 git init ~/git
-echo "origin"
 cd ~/git
 git remote add origin $GITLINK
