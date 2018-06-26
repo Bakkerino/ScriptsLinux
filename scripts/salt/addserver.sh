@@ -6,7 +6,7 @@ x=2
 
 for i in 1 2
 do
-commandip="sudo salt 'UBU1604-VM$x*' cmd.run 'hostname -i'"
+commandip="sudo salt 'MB-UBU1604-VM$x*' cmd.run 'hostname -i'"
 ip=$(eval $commandip)
 
 IP="$(cut -d':' -f2 <<< $ip)"
