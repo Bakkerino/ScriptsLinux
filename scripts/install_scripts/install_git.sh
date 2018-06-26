@@ -27,4 +27,4 @@ sudo git remote add origin $GITLINK
 echo "################################"
 echo "Pullen van inhoud git repository"
 echo "################################"
-git pull origin master
+sudo git pull origin master
