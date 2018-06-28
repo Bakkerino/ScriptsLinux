@@ -1,10 +1,13 @@
 python-pip:
   pkg.installed
 
-docker-py:
-  pip.installed:
-    - require:
-      - pkg: python-pip
+docker-compose:
+    pip.installed:
+      - force_reinstall: True
+      - upgrade: True
+      - no_cache_dir: True
+      - require:
+        - pkg: python-pip
 
 docker_repository:
   pkgrepo.managed:
@@ -18,3 +21,4 @@ docker-ce:
   pkg.installed:
     - require:
       - pkgrepo: docker_repository
+
